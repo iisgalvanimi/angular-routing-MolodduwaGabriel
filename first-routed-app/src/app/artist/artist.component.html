@@ -1,1 +1,5 @@
-<p>artist works!</p>
+<div *ngIf="artist">
+    
+   {{artist | json}}
+    <p><a href (click)="back()">Back</a></p>
+</div>
