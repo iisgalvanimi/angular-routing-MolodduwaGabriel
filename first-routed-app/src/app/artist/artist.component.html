@@ -1,5 +1,11 @@
 <div *ngIf="artist">
+     <h1>{{ artist.name }}</h1>
+   <p>
+        <img src="{{ artist.images[1].url }}">
+    </p>
+     
+     <h3>Numero di Follower totali : {{artist.followers.total}}</h3>
     
-   {{artist | json}}
+   
     <p><a href (click)="back()">Back</a></p>
 </div>
