@@ -1,1 +1,13 @@
-<p>album works!</p>
+<div *ngIf="album">
+   <h1> {{ album.name }}</h1>
+    <img src="{{ album.images[1].url }}">
+    <h3> Numero di traccie :{{ album.total_tracks }}</h3>
+    <div *ngFor='let track of album.tracks.items'>
+    <h2> {{ track.name }} </h2><br>
+    <audio controls src="{{ track.preview_url}}"></audio>
+
+    </div>
+
+
+    <p><a href (click)="back()">Back</a></p>
+</div>
